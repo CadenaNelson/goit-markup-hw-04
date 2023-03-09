@@ -1,7 +1,8 @@
 /* ------------ NORMALICE-----------------*/
 
 h1,h2,h3,h4,h5,h6,p{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 html{
     box-sizing: border-box;
@@ -53,8 +54,6 @@ a {
     padding: 0;
     box-sizing: border-box;
   }
-
-  
 .container { 
     width: 1200px; 
     padding-left: 15px; 
@@ -65,8 +64,6 @@ a {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
-
 
 /* ----------------HEADER---------------------------*/
 
@@ -97,8 +94,24 @@ a {
 }
 .link-study:hover,
 .link-study:focus{
-    color: var(--color-texto-principal);
+    color: var(--color-texto-secundario);
+ }
+
+.link-study{
+    position: relative;
 }
+
+.link-study::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-texto-secundario);
+    }
+
+
 .link-portfolio{
     color: var(--color-texto-secundario);
     font-family: "Roboto";
@@ -129,7 +142,7 @@ a {
     color: var(--color-texto-secundario);
 }
 .link-header{
-    color: var(--color-texto-secundario);
+    color:#757575  ;
     font-family: "Roboto";
     font-weight: 500;
     line-height: 0.86;
@@ -141,7 +154,7 @@ a {
 
 .link-header:hover,
 .link-header:focus{
-    color: var(--color-texto-principal);
+    color: var(--color-texto-secundario);
 }
 .header-number-contact{
     color: #757575;
@@ -169,7 +182,7 @@ a {
 }
 .link-nav{
     display: flex; 
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 80px;
     text-decoration: none;
@@ -179,8 +192,16 @@ a {
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 80px;
+    gap: 30px;
     }
+
+.list-ul-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 62px;
+}
 
 .list-ul-contacs{
     display: flex;
@@ -191,24 +212,67 @@ a {
 }
 
 .email{
-   
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+}
+.email:hover use{
+    fill: var(--color-texto-secundario);
+
+}
+.icon-email{
+    fill: #757575;
 }
 
+.tel:hover use{
+    fill: var(--color-texto-secundario);
+}
 .tel{
-    width: 100%;
+    cursor: pointer;
+}
+.tel{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 08px;
 }    
+.icon-tel{
+    fill: #757575;
+}
 
 /*------------MAIN------------------------*/
-/*------------Titulo Principal----------------*/
 
+/*------hero------*/
+
+.hero{
+    color: var(--color-texto-terceario);
+    background-color: #2F303A;
+    text-align: center;
+    align-items: center;
+    padding: 200px 0;
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-image:
+    linear-gradient(to right, 
+    rgba(47,48,58,0.4), 
+    rgba(47,48,58,0.4)),
+    url(../images/Imagen.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.image-hero{
+    background-color: rbga(47, 48, 58, 0.4);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+/*------------Titulo Principal----------------*/
 .hero-title{
     color: var(--color-texto-terceario);
     width: 696px;
@@ -219,7 +283,6 @@ a {
     letter-spacing: 0.06em;
     margin-left:auto;
     margin-right: auto;
-   
 }
 
 /*---------Botón principal------------------------------------*/
@@ -239,19 +302,10 @@ a {
     margin-top: 30px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px; 
-    
 }
 .hero-button:hover, 
 .hero-button:focus{
     color: var(--color-texto-principal);
-}
-/*--------Flex Título y Botón principal------------------*/
-
-.hero{
-    color: var(--color-texto-terceario);
-    background-color: #2F303A;
-    text-align: center;
-    padding: 200px 0;
 }
 
 /*-------Sección de beneficios y servicios--------------------------------*/
@@ -267,7 +321,6 @@ a {
     gap: 20px;
 
 }
-
 .titles{
     color: var(--color-texto-principal);
     font-weight: 700;
@@ -292,7 +345,6 @@ a {
     font-size: 16px;
     line-height: 1.18;
     margin-bottom: 10px;
-    
 }
 .paragraph-second{
     font-family: "Roboto";
@@ -307,7 +359,6 @@ a {
     justify-content: center;
     align-items: center;
 }
-
 .title-service{
     font-weight: 700;
     font-size: 36px;
@@ -331,21 +382,39 @@ a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .team-member {
-    padding: 30px;
+    padding-top: 30px;
 }
 /*-----------------ICONOS REDES SOCIAlES-----------------*/
-.icon-section >svg:hover{
-    border: 10px solid red;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+
+.social-networks{
+    list-style: none;
+
+}
+.ul-social-networks{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    
-    
+    gap: 20px;
+    padding: 16px;
+    cursor: pointer; 
 }
+.team-contact-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: var(--color-texto-secundario);
+}
+
+.team-contact-icon{
+    fill: #AFB1B8; 
+}
+.team-contact-icon:hover{
+    fill: var(--color-texto-terceario);
+}
+
 .icon-section{
     width: 100%;
     display: flex;
@@ -383,11 +452,13 @@ a {
     justify-content: center;
     align-items: center;
 }
-
-.bord-icons> svg:hover > path{
+  
+.icon-group{
+    fill: #AFB1B8;
+} 
+.icon-group:hover{
     fill: var(--color-texto-secundario);
-}  
-
+}
 
  /*--------------------FOOTER--------------------------*/
 .link-study-footer{
@@ -431,16 +502,33 @@ a {
 }
 .footer{
     background-color: #2F303A; 
-    padding: 94px var(--container-padding);
-    height: 252px;
-    left: 0px;
-    top: 2158px;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 94px;
 }
 .list-addres{
     list-style: none;
     display: inline-block;
     flex-direction: column;
     margin: 0 auto;
+}
+.network-footer{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+.tile-network-footer{
+    color: var(--color-texto-terceario);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
 }
 
 /*-------PÁGINA DE PORTAFOLIO------------------------*/
