@@ -80,6 +80,7 @@ a {
 }
 /* --------enlaces header------------------------------*/
 
+
 .link-study{
     color: var(--color-texto-secundario);
     font-family: "Roboto";
@@ -94,23 +95,27 @@ a {
 }
 .link-study:hover,
 .link-study:focus{
-    color: var(--color-texto-secundario);
+    color: var(--color-texto-principal);
  }
 
 .link-study{
     position: relative;
 }
-
-.link-study::before{
+.link-study::after{
     content:"";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 1px;
     background-color: var(--color-texto-secundario);
     }
 
+.link-study:hover::after{
+    height: 4px;
+    color: var(--color-texto-secundario);
+
+}
 
 .link-portfolio{
     color: var(--color-texto-secundario);
@@ -151,7 +156,6 @@ a {
     padding-bottom: 32px;
     text-decoration: none;
     }
-
 .link-header:hover,
 .link-header:focus{
     color: var(--color-texto-secundario);
@@ -210,7 +214,6 @@ a {
     list-style: none;
     gap: 30px;
 }
-
 .email{
     display: flex;
     justify-content: center;
@@ -218,15 +221,16 @@ a {
     gap: 10px;
     cursor: pointer;
 }
-.email:hover use{
+.email:hover use,
+.email:focus use{
     fill: var(--color-texto-secundario);
-
 }
 .icon-email{
     fill: #757575;
 }
 
-.tel:hover use{
+.tel:hover use,
+.tel:focus use{
     fill: var(--color-texto-secundario);
 }
 .tel{
@@ -319,7 +323,6 @@ a {
     align-items: center;
     text-align: center;
     gap: 20px;
-
 }
 .titles{
     color: var(--color-texto-principal);
@@ -386,9 +389,31 @@ a {
 }
 /*-----------------ICONOS REDES SOCIAlES-----------------*/
 
+.team-contact-link{
+    display: flex;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-texto-terceario);
+    text-align: center;
+    align-items: center;
+    line-height: 1.87;
+}
+
+.team-contact-link:hover{
+    display: flex;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-texto-secundario);
+    text-align: center;
+    align-items: center;
+    line-height: 1.87;
+}
 .social-networks{
     list-style: none;
-
 }
 .ul-social-networks{
     display: flex;
@@ -407,14 +432,13 @@ a {
     border-radius: 50%;
     color: var(--color-texto-secundario);
 }
-
 .team-contact-icon{
     fill: #AFB1B8; 
 }
-.team-contact-icon:hover{
+.team-contact-icon:hover,
+.team-contact-icon:focus{
     fill: var(--color-texto-terceario);
 }
-
 .icon-section{
     width: 100%;
     display: flex;
@@ -422,10 +446,10 @@ a {
     padding: 16px;
 }
 .icon-section > svg > path{
-    fill: #AFB1B8;
-    
+    fill: #AFB1B8;  
 }
-.icon-section > svg:hover > path {
+.icon-section > svg:hover > path,
+.icon-section > svg:focus > path {
     fill: var(--color-texto-terceario);
     cursor: pointer;
 }
@@ -437,13 +461,13 @@ a {
     align-items: center;
     text-align: center;
     gap:30px;
-    padding-top: 44px;
+    padding: 0;
 }
-.bord-icons:hover{
+.bord-icons:hover,
+.bord-icons:focus{
     border: 1px solid var(--color-texto-secundario);
     cursor: pointer;
 }
-
 .bord-icons{
     border: 1px solid #AFB1B8;
     width: 170px;
@@ -452,11 +476,11 @@ a {
     justify-content: center;
     align-items: center;
 }
-  
 .icon-group{
     fill: #AFB1B8;
 } 
-.icon-group:hover{
+.icon-group:hover,
+.icon-group:focus{
     fill: var(--color-texto-secundario);
 }
 
@@ -529,6 +553,33 @@ a {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+}
+.team-contact-link2{
+    display: flex;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #3e4155;
+    text-align: center;
+    align-items: center;
+    line-height: 1.87;
+ }
+
+ .team-contact-icon2{
+    fill: var(--color-texto-terceario);
+    }
+
+.team-contact-link2:hover{
+        display: flex;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--background-color-principal);
+        text-align: center;
+        align-items: center;
+        line-height: 1.87;
 }
 
 /*-------PÁGINA DE PORTAFOLIO------------------------*/
@@ -620,7 +671,6 @@ a {
 .title-h3{
     font-size: 18px;
     width: 322px;
-  
 }
 .paragraph-portfolio{
     font-size: 16px;
@@ -629,11 +679,6 @@ a {
 }
 .reading-port{
     padding: 20px 24px;
-}
-.antenna{
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 
