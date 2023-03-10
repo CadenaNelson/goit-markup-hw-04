@@ -96,9 +96,7 @@ a {
 .link-study:focus{
     color: var(--color-texto-principal);
  }
-.link-study{
-    position: relative;
-}
+
 .link-study::after{
     content:"";
     position: absolute;
