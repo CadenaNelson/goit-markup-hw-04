@@ -158,19 +158,8 @@ a {
 .link:focus{
     color: var(--color-texto-secundario);
 }
-.link::after{
-    content:"";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-texto-secundario);
-    }
-.link:hover::after{
-    height: 4px;
-    color: var(--color-texto-secundario);
-}
+
+
 
 /*-------------------------------------------*/
 .link-header{
@@ -469,6 +458,8 @@ a {
     justify-content: space-around;
     padding: 16px;
 }
+
+
 .icon-section > svg > path{
     fill: #AFB1B8;  
 }
