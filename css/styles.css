@@ -233,7 +233,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     cursor: pointer;
 }
 .email:hover use,
@@ -242,6 +242,7 @@ a {
 }
 .icon-email{
     fill: #757575;
+    margin-right: 10px;
 }
 
 .tel:hover use,
@@ -259,6 +260,7 @@ a {
 }    
 .icon-tel{
     fill: #757575;
+    margin-right: 10px;
 }
 /*---------------------------MAIN------------------------*/
 /*------hero------*/
@@ -421,7 +423,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding-top: 20px;
+    margin-top: 20px;
     cursor: pointer; 
     list-style: none;
 }
@@ -478,7 +480,7 @@ a {
     gap:30px;
     padding: 0;
 }
-.bord-icons:hover a .icon-group{
+.bord-icons:hover .icon-group{
     fill:var(--color-texto-secundario);
     cursor: pointer;
 }
